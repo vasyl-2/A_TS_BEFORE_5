@@ -1,15 +1,32 @@
 {
   "name": "a_ts_before_5",
+  "main": "dist/index.js",
+  "types": "decl/index.d.ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "learn ts things",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc",
+    "package-do": "npm pack",
+    "package-remove": "npm unpublish a_ts_before_5",
+    "publish": "npm publish",
+    "test-run": "node dist/test.js"
   },
+  "files": [
+    "dist",
+    "decl",
+    "src"
+  ],
   "keywords": [],
-  "author": "",
+  "author": "vasyl-2",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.4",
+    "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "reflect-metadata": "^0.2.1"
   }
 }
